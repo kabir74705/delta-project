@@ -48,6 +48,9 @@ const sessionoptions = {
         httpsOnly : true
     }
 }
+app.get("/",(req,res)=>{
+    res.redirect("/listings")
+})
 
 app.use(session(sessionoptions))
 app.use(flash())
