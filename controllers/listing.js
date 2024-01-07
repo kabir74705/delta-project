@@ -72,3 +72,10 @@ module.exports.updateListing = async (req,res)=>{
     req.flash("success", "listing deleted")
     res.redirect("/listings")
 }
+ module.exports.categorise = async (req,res)=>{
+    let {value} = req.params
+    let allListings = await Listing.find({category:`${value}`})
+    
+    res.render("listings/index.ejs",{allListings})
+    
+}

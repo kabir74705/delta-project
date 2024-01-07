@@ -11,6 +11,7 @@ const {isloggedin, isowner,validatelisting} = require("../middleware.js")
 
 const router = express.Router()
 router.get("/new" , isloggedin ,listingcontroller.renderNewForm)
+router.get("/category/:value",listingcontroller.categorise)
 router.route("/")
 .get(wrapAsync(listingcontroller.index))
 .post( isloggedin, upload.single("listing[image]"), validatelisting ,wrapAsync(listingcontroller.createListing))  

@@ -87,3 +87,15 @@ body{
     height: 400px;
     width: 80vh;
  }
+ a p{
+    text-decoration: none;
+    color: black;
+ }
+ a i{
+    text-decoration: none !important;
+    color: black;
+ }
+ a{
+    text-decoration: none !important;
+ }
+ 
